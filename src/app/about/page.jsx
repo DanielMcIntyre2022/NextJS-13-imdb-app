@@ -1,7 +1,7 @@
 
 function page() {
   return (
-    <div className="max-w-6xl mx-auto space-y-4">
+    <div className="max-w-6xl mx-auto space-y-4 p-4">
         <h1 className="text-2xl font-medium text-amber-300">About</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis pariatur sed, quos nostrum facere omnis tenetur inventore asperiores error deserunt dicta sunt nihil consectetur! 
             Autem, facilis? Nemo, repudiandae blanditiis? Ullam.</p>
