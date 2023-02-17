@@ -13,13 +13,15 @@ export default async function Home({ searchParams }) {
 
   const data = await res.json();
 
-  const results = data.results;
+  if(!res.ok) {
+    throw new Error('Failed to fetch data')
+  };
 
-  console.log(results);
+  const results = data.results;
 
   return (
    <div>
-        <h1 className='text-red-500'>Home</h1>
+      
     </div>
   )
 };
