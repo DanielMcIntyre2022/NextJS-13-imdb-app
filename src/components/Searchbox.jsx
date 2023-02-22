@@ -27,6 +27,7 @@ const handleSubmit = (e) => {
         outline-none bg-transparent flex-1"
         />
         <button 
+        disabled={!search}
         className="text-amber-300
         disabled:text-gray-400"
         type="submit">Search</button>
