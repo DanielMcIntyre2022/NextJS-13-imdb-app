@@ -1,9 +1,18 @@
-import React from 'react'
+async function getMovie(movieId) {
+        const res = await fetch(`https://api.themoviedb.org/3/movie/
+        ${movieId}?api_key=${process.env.API_KEY}`);
+        return await res.json();
+};
 
-function page() {
-  return (
-    <div>Movie Page</div>
+async function MoviePage({params}) {
+    const movieId = params.id;
+    const movie = await getMovie(movieId);
+  
+    return (
+    <div>
+        <h1>{movie.title || movie.name}</h1>
+    </div>
   )
-}
+};
 
-export default page;
+export default MoviePage;
